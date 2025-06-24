@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join</title>
+
+    <!--Font Awsome-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amatic+SC:wght@400;700&family=Arima:wght@100..700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Assistant:wght@200..800&family=Bree+Serif&family=Edu+QLD+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootsrap-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- My Styling  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="body position-relative">
+    <nav class="navbar navbar-expand-lg p-3 z-3">
+      <div class="container-fluid">
+        <a class="navbar-brand w-25" href="#">
+          <div
+            class="logo-container d-flex column-gap-2 justify-content-center"
+          >
+            <div class="logo-img d-flex align-items-center">
+              <img src="./images/logo.png" alt="cloud logo image" class="" />
+            </div>
+            <div class="siteName d-flex flex-column">
+              <h4 class="mb-0">Weather</h4>
+              <small class="">tagline goes here</small>
+            </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./contact.html"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link find-location" aria-current="page"
+                ><i class="fa-solid fa-magnifying-glass-location fs-5"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container-fluid">
+        <div class="main-image position-relative">
+          <!-- <img src="./images/stanli.jpg" class="w-100" /> -->
+          <!-- <div class="layer"></div> -->
+        </div>
+
+        <div
+          class="container weather-section position-absolute start-50 translate-middle-x"
+        >
+          <div class="form-floating mb-3 d-flex align-items-center mb-5">
+            <input
+              type="text"
+              class="form-control rounded-0 rounded-start-pill bg-trasparent border-end-0 text-center city-name"
+              id="floatingInput"
+            />
+            <button
+              class="btn btn-primary py-3 px-4 rounded-0 rounded-end-pill search-btn"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <label for="floatingInput" class="text-white">Find Your City</label>
+          </div>
+
+          <!-- <input type="text" class="form-control mb-5 mx-auto w-50" /> -->
+          <div class="row">
+            <div class="card col-md-4 text-white p-2">
+              <div class="current-inner bg-primary rounded-4">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <p class="mb-0 day">day</p>
+                  <p class="mb-0 date">date</p>
+                </div>
+
+                <div
+                  class="card-body d-flex flex-column align-items-center rounded-bottom-2"
+                >
+                  <div class="condition-img d-flex align-items-center">
+                    <img
+                      src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                      alt=""
+                      class="w-100 icon"
+                    />
+                    <p class="mb-0 ms-3 condition">Sunny</p>
+                  </div>
+
+                  <h1 class="text-center degree mb- temp">35.1<sup>o</sup></h1>
+                  <h5 class="mb-3 area">New York</h5>
+
+                  <div class="container">
+                    <div class="row">
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-water"></i>
+                          </li>
+                          <li class="list-group-item"><span>H</span>umidity</li>
+                          <li class="list-group-item humidity">20%</li>
+                        </ul>
+                      </div>
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-wind"></i>
+                          </li>
+                          <li class="list-group-item">
+                            <span>W</span>ind Speed
+                          </li>
+                          <li class="list-group-item wind">20%</li>
+                        </ul>
+                      </div>
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-cloud"></i>
+                          </li>
+                          <li class="list-group-item"><span>C</span>louds</li>
+                          <li class="list-group-item clouds">20%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tomorrow card col-md-4 text-white p-2">
+              <div class="inner bg-primary rounded-4">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <p class="mb-0 day">day</p>
+                  <p class="mb-0 date">date</p>
+                </div>
+
+                <span class="expected">Expected</span>
+
+                <div
+                  class="card-body d-flex flex-column align-items-center rounded-bottom-2"
+                >
+                  <div class="condition-img d-flex align-items-center">
+                    <img
+                      src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                      alt=""
+                      class="w-100 icon"
+                    />
+                    <p class="mb-0 ms-3 condition">Sunny</p>
+                  </div>
+
+                  <h1 class="text-center degree mb- temp">35.1<sup>o</sup></h1>
+                  <h5 class="mb-3 area">New York</h5>
+
+                  <div class="container">
+                    <div class="row">
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-water"></i>
+                          </li>
+                          <li class="list-group-item"><span>H</span>umidity</li>
+                          <li class="list-group-item humidity">20%</li>
+                        </ul>
+                      </div>
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-wind"></i>
+                          </li>
+                          <li class="list-group-item">
+                            <span>W</span>ind Speed
+                          </li>
+                          <li class="list-group-item wind">20%</li>
+                        </ul>
+                      </div>
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-cloud"></i>
+                          </li>
+                          <li class="list-group-item"><span>C</span>louds</li>
+                          <li class="list-group-item clouds">20%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="last card col-md-4 text-white p-2">
+              <div class="inner bg-primary rounded-4">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <p class="mb-0 day">day</p>
+                  <p class="mb-0 date">date</p>
+                </div>
+
+                <span class="expected">Expected</span>
+
+                <div
+                  class="card-body d-flex flex-column align-items-center rounded-bottom-2"
+                >
+                  <div class="condition-img d-flex align-items-center">
+                    <img
+                      src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                      alt=""
+                      class="w-100 icon"
+                    />
+                    <p class="mb-0 ms-3 condition">Sunny</p>
+                  </div>
+
+                  <h1 class="text-center degree mb- temp">35.1<sup>o</sup></h1>
+                  <h5 class="mb-3 area">New York</h5>
+
+                  <div class="container">
+                    <div class="row">
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-water"></i>
+                          </li>
+                          <li class="list-group-item"><span>H</span>umidity</li>
+                          <li class="list-group-item humidity">20%</li>
+                        </ul>
+                      </div>
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-wind"></i>
+                          </li>
+                          <li class="list-group-item">
+                            <span>W</span>ind Speed
+                          </li>
+                          <li class="list-group-item wind">20%</li>
+                        </ul>
+                      </div>
+                      <div class="air-conditions col-4">
+                        <ul class="ps-0 d-flex flex-column align-items-center">
+                          <li class="list-group-item">
+                            <i class="fa-solid fa-cloud"></i>
+                          </li>
+                          <li class="list-group-item"><span>C</span>louds</li>
+                          <li class="list-group-item clouds">20%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- this will be footer -->
+          <div class="footer py-5 rounded-2 px-5 my-5">
+            <div
+              class="footer-content d-flex justify-content-between align-items-center"
+            >
+              <div class="subscribe form-control d-flex">
+                <input
+                  type="tetx"
+                  class="form-control"
+                  placeholder="Enter your email to subscribe"
+                />
+                <button class="btn btn-primary rounded-5">Subscribe</button>
+              </div>
+              <div
+                class="social-media w-25 d-flex column-gap-2 justify-content-center"
+              >
+                <a href="https://www.facebook.com/marawanelnams"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=marawanelsawy00@gmail.com"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+              </div>
+            </div>
+            <p class="copy-right stext-white mb-0 text-center mt-5">
+              Copyright 2014 Company name. Designed by Themezy. All rights
+              reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="error">
+      <img src="./images/rain11.png " class="w-100" />
+      <p class="message position-absolute">Enter valid city name</p>
+    </div>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

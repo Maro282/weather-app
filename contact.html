@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join</title>
+
+    <!--Font Awsome-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Google Fonts -->
+
+    <!-- Bootsrap-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- My Styling  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="body">
+    <nav class="navbar navbar-expand-lg p-3 z-3 mb-5">
+      <div class="container-fluid">
+        <a class="navbar-brand w-25" href="#">
+          <div
+            class="logo-container d-flex column-gap-2 justify-content-center"
+          >
+            <div class="logo-img d-flex align-items-center">
+              <img src="./images/logo.png" alt="cloud logo image" class="" />
+            </div>
+            <div class="siteName d-flex flex-column">
+              <h4 class="mb-0">Weather</h4>
+              <small class="">tagline goes here</small>
+            </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-contact">
+      <div class="container form-control p-3 rounded-5">
+        <nav
+          style="--bs-breadcrumb-divider: '>'"
+          aria-label="breadcrumb"
+          class="d-flex align-items-center"
+        >
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item home">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item contact"><a> > </a></li>
+            <li class="breadcrumb-item contact" aria-current="page">
+              <a>Contact</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="container">
+        <div class="row row-gap-4">
+          <div class="left-side col-lg-6 p-4">
+            <div class="inner p-3 rounded-4">
+              <div class="map ps-3">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.049551799046!2d29.979649925656528!3d31.247051560596955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5db8a16c3c77d%3A0x24c465e134255814!2sRoute%20IT%20Training%20Center!5e0!3m2!1sar!2seg!4v1750701897540!5m2!1sar!2seg"
+                  width="98%"
+                  height="350"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="rounded-3"
+                ></iframe>
+              </div>
+              <div class="content p-3">
+                <div class="location d-flex align-items-center column-gap-2">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <p class="mb-0">
+                    Company Name INC.<br />
+                    2803 Avenue Street, Los Angeles
+                  </p>
+                </div>
+                <div
+                  class="email-phone pt-3 d-flex align-items-center column-gap-4"
+                >
+                  <div class="phone d-flex align-items-center column-gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="mb-0">+20 01275311282</p>
+                  </div>
+                  <div class="email d-flex align-items-center column-gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="mb-0">marawanelsawy00@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-side col-lg-6 p-4 d-flex flex-column">
+            <div
+              class="inner rounded-4 p-3 d-flex flex-column row-gap-4 text-white"
+            >
+              <h1 class="p-2 rounded-4">Contact Us</h1>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Veritatis nam dolores, repellat vel possimus numquam sunt error.
+                Quasi tempore nesciunt fuga voluptatem quam porro molestias
+                magnam tempora dicta doloribus. Fugiat.
+              </p>
+              <div class="contact-inputs">
+                <div class="first-pair d-flex column-gap-2 mb-3">
+                  <input
+                    type="text"
+                    placeholder="Your Name.."
+                    class="form-control py-3 rounded-5"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Email address.. "
+                    class="form-control py-3 rounded-5"
+                  />
+                </div>
+                <div class="second-pair d-flex column-gap-2 mb-3">
+                  <input
+                    type="text"
+                    placeholder="Company name .."
+                    class="form-control py-3 rounded-5"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Website.."
+                    class="form-control py-3 rounded-5"
+                  />
+                </div>
+                <div class="form-floating w-100">
+                  <textarea
+                    class="form-control rounded-5 text-white"
+                    placeholder="Leave a comment here"
+                    style="height: 200px"
+                  ></textarea>
+                </div>
+              </div>
+              <button class="btn btn-outline-primary py-2 px-3 rounded-pill">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer py-5 rounded-2 px-5 mt-5">
+      <div
+        class="footer-content d-flex justify-content-between align-items-center"
+      >
+        <div class="subscribe form-control d-flex">
+          <input
+            type="tetx"
+            class="form-control"
+            placeholder="Enter your email to subscribe"
+          />
+          <button class="btn btn-primary rounded-5">Subscribe</button>
+        </div>
+        <div
+          class="social-media w-25 d-flex column-gap-2 justify-content-center"
+        >
+          <a href="https://www.facebook.com/marawanelnams"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=marawanelsawy00@gmail.com"
+            ><i class="fa-brands fa-google-plus-g"></i
+          ></a>
+          <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <p class="copy-right stext-white mb-0 text-center mt-5">
+        Copyright 2014 Company name. Designed by Themezy. All rights reserved
+      </p>
+    </div>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
