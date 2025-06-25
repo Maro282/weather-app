@@ -116,19 +116,28 @@ function display() {
 //Geolocation
 
 findLocation.addEventListener("click", function () {
-  navigator.geolocation.getCurrentPosition(function (position) {
-    const lat = position.coords.latitude;
-    const long = position.coords.longitude;
-    fetch(
-      `https://api.opencagedata.com/geocode/v1/json?key=${apiKeyOpenCage}&q=${lat}+${long}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        getWeather(data.results[0].components.city);
-        cityName.value = data.results[0].components.city;
-      })
-      .catch(function () {
-        console.log("Canot find location"); // for tracing only
-      });
-  });
+  navigator.geolocation.getCurrentPosition(
+    function (position) {
+      const lat = position.coords.latitude;
+      const long = position.coords.longitude;
+      fetch(
+        `https://api.opencagedata.com/geocode/v1/json?key=${apiKeyOpenCage}&q=${lat}+${long}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          getWeather(data.results[0].components.city);
+          cityName.value = data.results[0].components.city;
+        })
+        .catch(function (error) {
+          alert("error while fetch or processing data", error); // for tracing
+        });
+    },
+    function (error) {
+      if (error.code === error.PERMISSION_DENIED) {
+        alert(
+          `Location access was denied.if you previously dismissed the location request, your browser may have blocked it permanently.Please click 🔒 icon in the address bar and reset location permission`
+        );
+      }
+    }
+  );
 });
